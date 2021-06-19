@@ -24,142 +24,188 @@
     <div id="main_layout" class="flex relative overflow-x-hidden flex-col lg:px-0">
 
         <header id="header" class="xl:h-500 bg-black overflow-hidden relative">
-            <div class="kepala absolute top-0 w-full z-50">
-                <div class="minibar text-white border-b border-white border-opacity-25 py-6">
-                    <div class="container mx-auto lg:px-0 px-8">
-                        <div class="flex justify-between items-center">
-                            <div class="social flex">
-                                <a href="#" class="text-white mr-4" title="Instagram">
-                                    <span class="iconify" data-width="25" data-icon="akar-icons:instagram-fill"
-                                        data-inline="false"></span>
-                                </a>
-                                <a href="#" class="text-white mx-4" title="Instagram">
-                                    <span class="iconify" data-width="23" data-icon="brandico:facebook-rect"
-                                        data-inline="false"></span>
-                                </a>
-                                <a href="#" class="text-white mx-4" title="Instagram">
-                                    <span class="iconify" data-width="25" data-icon="akar-icons:twitter-fill"
-                                        data-inline="false"></span>
-                                </a>
+            <div class="kepala lg:absolute top-0 w-full z-50">
+                <div class="minibar border-b border-white border-opacity-25 lg:py-6 py-2 lg:block text-white lg:bg-transparent bg-main font-medium">
+                    <div class="lg:container mx-auto lg:px-0">
+                        <div class="flex flex-wrap w-full lg:justify-between justify-center lg:items-center">
+                            <div class="social w-full lg:w-max lg:order-first order-last">
+                                <div class="flex justify-center my-1">
+                                    <a href="#" class="text-white inline-block mx-2 lg:mr-4"
+                                        title="Instagram">
+                                        <span class="iconify text-lg lg:text-3xl" data-icon="akar-icons:instagram-fill"
+                                            data-inline="false"></span>
+                                    </a>
+                                    <a href="#" class="text-white inline-block mx-2 lg:mx-4"
+                                        title="Instagram">
+                                        <span class="iconify text-base lg:text-2xl relative"
+                                            data-icon="brandico:facebook-rect" data-inline="false"></span>
+                                    </a>
+                                    <a href="#" class="text-white inline-block mx-2 lg:mx-4"
+                                        title="Instagram">
+                                        <span class="iconify text-lg lg:text-3xl" data-icon="akar-icons:twitter-fill"
+                                            data-inline="false"></span>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="kontak flex">
-                                <div class="flex mx-6">
-                                    <span class="iconify mr-3" data-width="20" data-icon="bi:whatsapp"
-                                        data-inline="false"></span>
-                                    +62 81281409899
-                                </div>
-                                <div class="flex mx-6">
-                                    <span class="iconify mr-3" data-width="23" data-icon="grommet-icons:google-plus"
-                                        data-inline="false"></span>
-                                    puimu@gmail.com
-                                </div>
-                                <div class="flex mx-6">
-                                    <span class="iconify mr-3" data-width="23" data-icon="dashicons:clock"
-                                        data-inline="false"></span>
-                                    Mon-Fri 07.00 - 17.00
+                            <div class="kontak lg:text-base text-xs">
+                                <div class="flex">
+                                    <div class="lg:flex inline-block lg:mx-6 mx-2 text-center">
+                                        <span class="iconify inline-block lg:mr-3 lg:mb-0 mb-1" data-width="20" data-icon="bi:whatsapp"
+                                            data-inline="false"></span>
+                                        <span class="inline-block">+62 81281409899</span>
+                                    </div>
+                                    <div class="lg:flex inline-block lg:mx-6 mx-2 text-center">
+                                        <span class="iconify inline-block lg:mr-3 lg:mb-0 mb-1" data-width="23"
+                                            data-icon="grommet-icons:google-plus" data-inline="false"></span>
+                                        <span class="inline-block">puimu@gmail.com</span>
+                                    </div>
+                                    <div class="lg:flex lg:mx-6 mx-2 text-center hidden">
+                                        <span class="iconify inline-block lg:mr-3 lg:mb-0 mb-1" data-width="23" data-icon="dashicons:clock"
+                                            data-inline="false"></span>
+                                        <span class="inline-block">Mon-Fri 07.00 - 17.00</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="kanan">
+                <div class="kanan lg:bg-transparent bg-partner">
                     <div class="container mx-auto lg:px-0 px-8">
-                        <div class="flex justify-between items-center text-white py-6">
-                            <div class="logo">
-                                <a href="#" title="Site Branding">
-                                    <h1 class="uppercase text-4xl font-medium">Logipsum</h1>
-                                </a>
+                        <div class="lg:flex justify-between text-white py-6">
+                            <div class="lg:block flex justify-between items-center">
+                                <div class="logo">
+                                    <a href="#" title="Site Branding">
+                                        <h1 class="uppercase text-2xl lg:text-4xl font-medium">Logipsum</h1>
+                                    </a>
+                                </div>
+                                <button id="burger" class="lg:hidden block focus:outline-none">
+                                    <span class="iconify text-3xl" data-icon="fa-solid:bars" data-inline="false"></span>
+                                </button>
                             </div>
-                            <div class="navbar lg:flex">
+                            <div id="menu"
+                                class="navbar hidden lg:flex lg:py-0 py-4 lg:border-none border-t border-white border-opacity-20 lg:mt-0 mt-4">
                                 <ul class="menu inline-block">
-                                    <li class="lg:inline-block relative px-4"><a href="#"
+                                    <li class="lg:inline-block relative lg:px-4 lg:py-0 py-2"><a href="#"
                                             class="relative text-white lg:inline-block py-4 text-xl text-left">Home</a>
                                     </li>
-                                    <li class="lg:inline-block relative px-4"><a href="#"
+                                    <li class="lg:inline-block relative lg:px-4 lg:py-0 py-2"><a href="#"
                                             class="relative text-white lg:inline-block py-4 text-xl text-left">Our
                                             Product</a></li>
-                                    <li class="lg:inline-block relative px-4"><a href="#"
+                                    <li class="lg:inline-block relative lg:px-4 lg:py-0 py-2"><a href="#"
                                             class="relative text-white lg:inline-block py-4 text-xl text-left">Whitelabel</a>
-                                        <ul class="sub-menu hidden absolute left-2 bg-white max-w-full w-full p-3">
+                                        <ul id="sub-menu"
+                                            class="sub-menu hidden lg:absolute static left-2 bg-white max-w-full w-full p-3">
                                             <li><a href="#">Nexus</a></li>
                                             <li><a href="#">1Gaming</a></li>
                                         </ul>
                                     </li>
-                                    <li class="lg:inline-block relative px-4"><a href="#"
+                                    <li class="lg:inline-block relative lg:px-4 lg:py-0 py-2"><a href="#"
                                             class="relative text-white lg:inline-block py-4 text-xl text-left">About
                                             Us</a></li>
-                                    <li class="lg:inline-block relative px-4"><a href="#"
+                                    <li class="lg:inline-block relative lg:px-4 lg:py-0 py-2"><a href="#"
                                             class="relative text-white lg:inline-block py-4 text-xl text-left">Register</a>
                                     </li>
                                 </ul>
+                                <div class="language lg:px-4 py-2">
+                                    <button id="btn-lang"
+                                        class="relative focus:outline-none text-white block w-full text-center lg:inline-block py-0 px-6 bg-black rounded-full text-xl text-left"><span
+                                            class="iconify inline-block" data-width="45"
+                                            data-icon="emojione-v1:flag-for-united-kingdom" data-inline="false"></span>
+                                        <span class="iconify inline-block ml-1" data-width="25"
+                                            data-icon="ant-design:down-circle-filled"
+                                            data-inline="false"></span></button>
+                                    <div id="dropdown-lang"
+                                        class="mt-1 h-0 overflow-hidden transition-all duration-500">
+                                        <div class="dpr">
+                                            <button id="eng"
+                                                class="relative focus:outline-none block text-white py-0 w-full text-xl text-center bg-black rounded-full my-1">
+                                                <span class="iconify inline-block" data-width="45"
+                                                    data-icon="emojione-v1:flag-for-united-kingdom"
+                                                    data-inline="false"></span> <span class="iconify inline-block ml-1"
+                                                    data-width="25" data-icon="ant-design:down-circle-filled"
+                                                    data-inline="false"></span>
+                                            </button>
+                                            <button id="eng"
+                                                class="relative focus:outline-none block text-white py-0 w-full text-xl text-center bg-black rounded-full my-1">
+                                                <span class="iconify inline-block" data-width="45"
+                                                    data-icon="emojione-v1:flag-for-indonesia"
+                                                    data-inline="false"></span> <span class="iconify inline-block ml-1"
+                                                    data-width="25" data-icon="ant-design:down-circle-filled"
+                                                    data-inline="false"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="bigban bigabout absolute text-white w-full">
-                <div class="container mx-auto">
-                    <div class="flex justify-between items-center">
-                        <div class="kirikan w-2/4">
-                            <img class="w-96 mx-auto" src="./assets/img/about.png" alt="">
+            <div class="bigban bigabout lg:absolute text-white w-full lg:py-0 py-10">
+                <div class="container mx-auto lg:px-0 px-4">
+                    <div class="lg:flex justify-between items-center">
+                        <div class="kirikan lg:w-2/4">
+                            <img class="lg:w-96 w-44 mx-auto" src="./assets/img/about.png" alt="">
                         </div>
-                        <div class="kanankan w-2/4">
-                            <h2 class="text-4xl font-semibold uppercase text-main mb-10 block"><span
-                                class="border-blue-600 border-b-4">About</span> Us</h2>
-                                <p class="text-lg font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dolor nihil impedit soluta, saepe repellat rem asperiores a id dignissimos quod possimus minus velit at sunt adipisci. Repellendus, officia ea!</p>
+                        <div class="kanankan lg:w-2/4 lg:text-left text-center lg:mt-0 mt-10">
+                            <h2 class="lg:text-4xl text-2xl font-semibold uppercase text-main lg:mb-10 mb-5 block"><span
+                                    class="border-blue-600 border-b-4">About</span> Us</h2>
+                            <p class="lg:text-lg font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Labore dolor nihil impedit soluta, saepe repellat rem asperiores a id dignissimos quod
+                                possimus minus velit at sunt adipisci. Repellendus, officia ea!</p>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
 
-        <div id="our_company" class="py-24 bg-white overflow-hidden">
-            <div class="container mx-auto">
+        <div id="our_company" class="lg:py-24 py-8 bg-white overflow-hidden">
+            <div class="container mx-auto lg:px-0 px-4">
                 <div id="cosult" class="seciton my-12">
-                    <div class="flex justify-between items-center">
-                        <div class="freeconsult w-2/4 lg:pr-16">
+                    <div class="lg:flex justify-between items-center">
+                        <div class="freeconsult lg:w-2/4 lg:pr-16 lg:mb-0 mb-10">
                             <form method="GET"">
-                                <div class=" border-main border-2 pt-14 pb-36 px-16">
-                                <h3 class="text-main uppercase text-4xl font-semibold tracking-wider mb-10">Free
+                                <div class=" border-main border-2 pt-14 pb-36 lg:px-16 px-5">
+                                <h3 class="text-main uppercase lg:text-4xl text-2xl lg:text-left text-center font-semibold tracking-wider mb-10">Free
                                     Consultation</h3>
                                 <div class="form-group mb-8">
                                     <label for="full_name" class="text-sm block mb-2 font-semibold">
                                         Full Name
                                     </label>
                                     <input type="text" name="full_name" id="full_name" placeholder="Anton Pui"
-                                        class="border-b border-black border-opacity-30 w-full">
+                                        class="border-b border-black border-opacity-30 w-full focus:outline-none">
                                 </div>
                                 <div class="form-group mb-8">
                                     <label for="full_name" class="text-sm block mb-2 font-semibold">
                                         Phone Number
                                     </label>
-                                    <input type="text" name="full_name" id="full_name"
+                                    <input type="number" name="full_name" id="full_name"
                                         placeholder="Enter your phone number"
-                                        class="border-b border-black border-opacity-30 w-full">
+                                        class="border-b border-black border-opacity-30 w-full focus:outline-none">
                                 </div>
                                 <div class="form-group mb-8">
                                     <label for="full_name" class="text-sm block mb-2 font-semibold">
                                         Full Name
                                     </label>
                                     <input type="text" name="full_name" id="full_name" placeholder="Anton Pui"
-                                        class="border-b border-black border-opacity-30 w-full">
+                                        class="border-b border-black border-opacity-30 w-full focus:outline-none">
                                 </div>
                                 <div class="form-group">
                                     <label for="full_name" class="text-sm block mb-2 font-semibold">
                                         Phone Number
                                     </label>
-                                    <input type="text" name="full_name" id="full_name"
+                                    <input type="number" name="full_name" id="full_name"
                                         placeholder="Enter your phone number"
-                                        class="border-b border-black border-opacity-30 w-full">
+                                        class="border-b border-black border-opacity-30 w-full focus:outline-none">
                                 </div>
                         </div>
                         <button type="submit" class="linearkan text-center p-4 text-xl block w-full text-white">Send
                             Your Message</button>
                         </form>
                     </div>
-                    <div class="infonya w-2/4">
-                        <h2 class="text-4xl font-semibold uppercase text-main mb-16 block"><span
+                    <div class="infonya lg:w-2/4">
+                        <h2 class="lg:text-4xl text-2xl font-semibold uppercase text-main mb-16 block"><span
                                 class="border-blue-600 border-b-4">Your</span> Successfull Pole</h2>
                         <div class="grid grid-cols-1 gap-y-10">
                             <div class="infoku">

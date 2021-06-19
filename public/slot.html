@@ -24,74 +24,118 @@
     <div id="main_layout" class="flex relative overflow-x-hidden flex-col lg:px-0">
 
         <header id="header" class="xl:h-500 bg-black overflow-hidden relative">
-            <div class="kepala absolute top-0 w-full z-50">
-                <div class="minibar text-white border-b border-white border-opacity-25 py-6">
-                    <div class="container mx-auto lg:px-0 px-8">
-                        <div class="flex justify-between items-center">
-                            <div class="social flex">
-                                <a href="#" class="text-white mr-4" title="Instagram">
-                                    <span class="iconify" data-width="25" data-icon="akar-icons:instagram-fill"
-                                        data-inline="false"></span>
-                                </a>
-                                <a href="#" class="text-white mx-4" title="Instagram">
-                                    <span class="iconify" data-width="23" data-icon="brandico:facebook-rect"
-                                        data-inline="false"></span>
-                                </a>
-                                <a href="#" class="text-white mx-4" title="Instagram">
-                                    <span class="iconify" data-width="25" data-icon="akar-icons:twitter-fill"
-                                        data-inline="false"></span>
-                                </a>
+            <div class="kepala lg:absolute top-0 w-full z-50">
+                <div class="minibar border-b border-white border-opacity-25 lg:py-6 py-2 lg:block text-white lg:bg-transparent bg-main font-medium">
+                    <div class="lg:container mx-auto lg:px-0">
+                        <div class="flex flex-wrap w-full lg:justify-between justify-center lg:items-center">
+                            <div class="social w-full lg:w-max lg:order-first order-last">
+                                <div class="flex justify-center my-1">
+                                    <a href="#" class="text-white inline-block mx-2 lg:mr-4"
+                                        title="Instagram">
+                                        <span class="iconify text-lg lg:text-3xl" data-icon="akar-icons:instagram-fill"
+                                            data-inline="false"></span>
+                                    </a>
+                                    <a href="#" class="text-white inline-block mx-2 lg:mx-4"
+                                        title="Instagram">
+                                        <span class="iconify text-base lg:text-2xl relative"
+                                            data-icon="brandico:facebook-rect" data-inline="false"></span>
+                                    </a>
+                                    <a href="#" class="text-white inline-block mx-2 lg:mx-4"
+                                        title="Instagram">
+                                        <span class="iconify text-lg lg:text-3xl" data-icon="akar-icons:twitter-fill"
+                                            data-inline="false"></span>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="kontak flex">
-                                <div class="flex mx-6">
-                                    <span class="iconify mr-3" data-width="20" data-icon="bi:whatsapp"
-                                        data-inline="false"></span>
-                                    +62 81281409899
-                                </div>
-                                <div class="flex mx-6">
-                                    <span class="iconify mr-3" data-width="23" data-icon="grommet-icons:google-plus"
-                                        data-inline="false"></span>
-                                    puimu@gmail.com
-                                </div>
-                                <div class="flex mx-6">
-                                    <span class="iconify mr-3" data-width="23" data-icon="dashicons:clock"
-                                        data-inline="false"></span>
-                                    Mon-Fri 07.00 - 17.00
+                            <div class="kontak lg:text-base text-xs">
+                                <div class="flex">
+                                    <div class="lg:flex inline-block lg:mx-6 mx-2 text-center">
+                                        <span class="iconify inline-block lg:mr-3 lg:mb-0 mb-1" data-width="20" data-icon="bi:whatsapp"
+                                            data-inline="false"></span>
+                                        <span class="inline-block">+62 81281409899</span>
+                                    </div>
+                                    <div class="lg:flex inline-block lg:mx-6 mx-2 text-center">
+                                        <span class="iconify inline-block lg:mr-3 lg:mb-0 mb-1" data-width="23"
+                                            data-icon="grommet-icons:google-plus" data-inline="false"></span>
+                                        <span class="inline-block">puimu@gmail.com</span>
+                                    </div>
+                                    <div class="lg:flex lg:mx-6 mx-2 text-center hidden">
+                                        <span class="iconify inline-block lg:mr-3 lg:mb-0 mb-1" data-width="23" data-icon="dashicons:clock"
+                                            data-inline="false"></span>
+                                        <span class="inline-block">Mon-Fri 07.00 - 17.00</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="kanan">
+                <div class="kanan lg:bg-transparent bg-partner">
                     <div class="container mx-auto lg:px-0 px-8">
-                        <div class="flex justify-between items-center text-white py-6">
-                            <div class="logo">
-                                <a href="#" title="Site Branding">
-                                    <h1 class="uppercase text-4xl font-medium">Logipsum</h1>
-                                </a>
+                        <div class="lg:flex justify-between text-white py-6">
+                            <div class="lg:block flex justify-between items-center">
+                                <div class="logo">
+                                    <a href="#" title="Site Branding">
+                                        <h1 class="uppercase text-2xl lg:text-4xl font-medium">Logipsum</h1>
+                                    </a>
+                                </div>
+                                <button id="burger" class="lg:hidden block focus:outline-none">
+                                    <span class="iconify text-3xl" data-icon="fa-solid:bars" data-inline="false"></span>
+                                </button>
                             </div>
-                            <div class="navbar lg:flex">
+                            <div id="menu"
+                                class="navbar hidden lg:flex lg:py-0 py-4 lg:border-none border-t border-white border-opacity-20 lg:mt-0 mt-4">
                                 <ul class="menu inline-block">
-                                    <li class="lg:inline-block relative px-4"><a href="#"
+                                    <li class="lg:inline-block relative lg:px-4 lg:py-0 py-2"><a href="#"
                                             class="relative text-white lg:inline-block py-4 text-xl text-left">Home</a>
                                     </li>
-                                    <li class="lg:inline-block relative px-4"><a href="#"
+                                    <li class="lg:inline-block relative lg:px-4 lg:py-0 py-2"><a href="#"
                                             class="relative text-white lg:inline-block py-4 text-xl text-left">Our
                                             Product</a></li>
-                                    <li class="lg:inline-block relative px-4"><a href="#"
+                                    <li class="lg:inline-block relative lg:px-4 lg:py-0 py-2"><a href="#"
                                             class="relative text-white lg:inline-block py-4 text-xl text-left">Whitelabel</a>
-                                        <ul class="sub-menu hidden absolute left-2 bg-white max-w-full w-full p-3">
+                                        <ul id="sub-menu"
+                                            class="sub-menu hidden lg:absolute static left-2 bg-white max-w-full w-full p-3">
                                             <li><a href="#">Nexus</a></li>
                                             <li><a href="#">1Gaming</a></li>
                                         </ul>
                                     </li>
-                                    <li class="lg:inline-block relative px-4"><a href="#"
+                                    <li class="lg:inline-block relative lg:px-4 lg:py-0 py-2"><a href="#"
                                             class="relative text-white lg:inline-block py-4 text-xl text-left">About
                                             Us</a></li>
-                                    <li class="lg:inline-block relative px-4"><a href="#"
+                                    <li class="lg:inline-block relative lg:px-4 lg:py-0 py-2"><a href="#"
                                             class="relative text-white lg:inline-block py-4 text-xl text-left">Register</a>
                                     </li>
                                 </ul>
+                                <div class="language lg:px-4 py-2">
+                                    <button id="btn-lang"
+                                        class="relative focus:outline-none text-white block w-full text-center lg:inline-block py-0 px-6 bg-black rounded-full text-xl text-left"><span
+                                            class="iconify inline-block" data-width="45"
+                                            data-icon="emojione-v1:flag-for-united-kingdom" data-inline="false"></span>
+                                        <span class="iconify inline-block ml-1" data-width="25"
+                                            data-icon="ant-design:down-circle-filled"
+                                            data-inline="false"></span></button>
+                                    <div id="dropdown-lang"
+                                        class="mt-1 h-0 overflow-hidden transition-all duration-500">
+                                        <div class="dpr">
+                                            <button id="eng"
+                                                class="relative focus:outline-none block text-white py-0 w-full text-xl text-center bg-black rounded-full my-1">
+                                                <span class="iconify inline-block" data-width="45"
+                                                    data-icon="emojione-v1:flag-for-united-kingdom"
+                                                    data-inline="false"></span> <span class="iconify inline-block ml-1"
+                                                    data-width="25" data-icon="ant-design:down-circle-filled"
+                                                    data-inline="false"></span>
+                                            </button>
+                                            <button id="eng"
+                                                class="relative focus:outline-none block text-white py-0 w-full text-xl text-center bg-black rounded-full my-1">
+                                                <span class="iconify inline-block" data-width="45"
+                                                    data-icon="emojione-v1:flag-for-indonesia"
+                                                    data-inline="false"></span> <span class="iconify inline-block ml-1"
+                                                    data-width="25" data-icon="ant-design:down-circle-filled"
+                                                    data-inline="false"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -103,20 +147,20 @@
             </div>
         </header>
 
-        <div id="our_company" class="py-24 bg-white overflow-hidden">
-            <div class="container mx-auto">
+        <div id="our_company" class="lg:my-24 my-10 bg-white overflow-hidden">
+            <div class="container mx-auto lg:px-0 px-4">
                 <div id="welcomz" class="mb-24">
-                    <div class="flex justify-between items-center">
-                        <div class="about_our w-2/4">
-                            <h2 class="text-5xl text-main uppercase font-semibold mb-12 block"><span
+                    <div class="lg:flex justify-between items-center">
+                        <div class="about_our lg:w-2/4 lg:mb-0 mb-10">
+                            <h2 class="lg:text-5xl text-2xl text-main uppercase font-semibold lg:mb-12 mb-7 block"><span
                                     class="border-blue-600 border-b-4">About</span> Our Company</h2>
                             <div class="desc">
-                                <p class="text-xl font-medium text-black mb-8">
+                                <p class="lg:text-xl font-medium text-black mb-8">
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur facere saepe
                                     iusto cumque quo rem repellat? Possimus consequuntur accusantium ut, reiciendis
                                     doloremque aliquid nisi eum similique provident nam numquam doloribus.
                                 </p>
-                                <div class="grid grid-cols-2 gap-4 mb-8">
+                                <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 mb-8">
                                     <div class="list_item">
                                         <div class="flex items-center">
                                             <div>
@@ -159,11 +203,13 @@
                                     </div>
                                 </div>
                                 <div class="learn_more">
-                                    <a href="#" class="bg-main text-center text-white py-3 px-10 border-main border hover:bg-white hover:text-black transition-all duration-300 rounded-full inline-block text-xl">Learn More</a>
+                                    <a href="#"
+                                        class="bg-main text-center text-white py-3 px-10 border-main border hover:bg-white hover:text-black transition-all duration-300 rounded-full inline-block text-xl">Learn
+                                        More</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="girl w-2/4">
+                        <div class="girl lg:w-2/4">
                             <div class="text-center mx-auto">
                                 <img class="mx-auto" src="./assets/img/tembak_ikan.png" alt="Girl" />
                             </div>
@@ -171,11 +217,11 @@
                     </div>
                 </div>
                 <div id="device" class="my-24">
-                    <div class="flex justify-between items-center">
-                        <div class="device w-2/4">
-                            <img src="./assets/img/device.png" alt="device">
+                    <div class="lg:flex justify-between items-center">
+                        <div class="device lg:w-2/4">
+                            <img class="lg:w-auto max-w-full w-full" src="./assets/img/device.png" alt="device">
                         </div>
-                        <div class="sas w-2/4 lg:pl-8">
+                        <div class="sas lg:w-2/4 lg:pl-8">
                             <div class="grid grid-cols-1 gap-y-4">
                                 <div class="list_itemx bg-whie shadow-xl rounded px-6 py-10">
                                     <div class="flex items-center">
@@ -183,9 +229,11 @@
                                             <img src="./assets/img/sas_1.png" alt="sas">
                                         </div>
                                         <div class="sastitle">
-                                            <h2 class="font-bold text-black text-2xl mb-3">Lorem ipsum dolor sit amet.</h2>
+                                            <h2 class="font-bold text-black text-2xl mb-3">Lorem ipsum dolor sit amet.
+                                            </h2>
                                             <p>
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum excepturi quod doloremque?.
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum
+                                                excepturi quod doloremque?.
                                             </p>
                                         </div>
                                     </div>
@@ -196,9 +244,11 @@
                                             <img src="./assets/img/sas_2.png" alt="sas">
                                         </div>
                                         <div class="sastitle">
-                                            <h2 class="font-bold text-black text-2xl mb-3">Lorem ipsum dolor sit amet.</h2>
+                                            <h2 class="font-bold text-black text-2xl mb-3">Lorem ipsum dolor sit amet.
+                                            </h2>
                                             <p>
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum excepturi quod doloremque?.
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum
+                                                excepturi quod doloremque?.
                                             </p>
                                         </div>
                                     </div>
@@ -209,9 +259,11 @@
                                             <img src="./assets/img/sas_3.png" alt="sas">
                                         </div>
                                         <div class="sastitle">
-                                            <h2 class="font-bold text-black text-2xl mb-3">Lorem ipsum dolor sit amet.</h2>
+                                            <h2 class="font-bold text-black text-2xl mb-3">Lorem ipsum dolor sit amet.
+                                            </h2>
                                             <p>
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum excepturi quod doloremque?.
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum
+                                                excepturi quod doloremque?.
                                             </p>
                                         </div>
                                     </div>
@@ -223,20 +275,21 @@
             </div>
         </div>
 
-        <div id="our_partner" class="py-12"
-            style="background: #1c1c1c;">
+        <div id="our_partner" class="py-12" style="background: #1c1c1c;">
             <div class="container mx-auto lg:px-0 px-4">
-                <h3 class="text-white text-5xl font-medium tracking-wider uppercase mb-16 text-center">Our Partners</h3>
+                <h3 class="text-white lg:text-5xl text-3xl font-medium tracking-wider uppercase mb-16 text-center">Our
+                    Partners</h3>
                 <img class="max-w-full w-full" src="./assets/img/partners_slot.png" alt="">
             </div>
         </div>
 
-        <div id="kontaksaya" class="section py-12">
-            <div class="container mx-auto">
-                <div class="flex justify-between items-center">
-                    <h2 class="text-white text-4xl">Would you like to work with us?</h2>
+        <div id="kontaksaya" class="section py-12 lg:text-left text-center">
+            <div class="container mx-auto lg:px-0 px-4">
+                <div class="lg:flex justify-between items-center">
+                    <h2 class="text-white lg:text-4xl lg:mb-0 mb-4">Would you like to work with us?</h2>
                     <div class="kontak-btn">
-                        <a href="#" class="bg-kontak text-white text-3xl rounded-xl p-4 px-8 capitalize">
+                        <a href="#"
+                            class="bg-kontak text-white lg:text-3xl rounded-xl inline-block p-4 px-8 capitalize">
                             Contact us now
                         </a>
                     </div>

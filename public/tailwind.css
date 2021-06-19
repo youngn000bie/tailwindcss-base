@@ -2,7 +2,7 @@
 @tailwind components;
 
 :root {
-  --main: #0098ff
+  --main: #0098ff;
 }
 
 body {
@@ -10,25 +10,44 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-a, a:hover {
-  transition: .3s all;
+a,
+a:hover {
+  transition: 0.3s all;
 }
 
-.slick-next {
-  transform: translate(20px, -220px)
+
+@media (min-width: 320px) {
+  .partner-next , .partner-prev {
+    display: none !important;
+  }
 }
 
-.slick-prev {
-  transform: translate(-60px, -220px)
+@media (min-width: 1024px) {
+  .slick-next {
+    display: block !important;
+    transform: translate(20px, -220px);
+  }
+
+  .slick-prev {
+    display: block !important;
+    transform: translate(-60px, -220px);
+  }
+
+  .partner-next {
+    display: block !important;
+    transform: translate(-100px, -220px);
+  }
+
+  .partner-prev {
+    display: block !important;
+    transform: translate(100px, -220px);
+  }
 }
 
-.partner-next {
-  transform: translate(-100px, -220px)
+.slick-next , .slick-prev {
+  display: none;
 }
 
-.partner-prev {
-  transform: translate(100px, -220px)
-}
 
 .navbar .menu li:hover ul {
   display: block !important;
@@ -45,13 +64,23 @@ a, a:hover {
   width: 0;
   position: absolute;
   bottom: 0;
-  transition: .2s all;
+  transition: 0.2s all;
+}
+
+.menu .menu li ul li a::before {
+  content: "";
+  background: none !important;
+}
+
+.navbar .menu li ul li:hover a::before {
+  content: "";
+  width: 0% !important;
+  transition: 0.2s all;
 }
 
 .navbar .menu li:hover a::before {
   content: "";
   width: 100%;
-  transition: .2s all;
 }
 
 .navbar .menu li ul li a {
@@ -64,16 +93,22 @@ a, a:hover {
   color: var(--main);
 }
 
-#kontaksaya , .linearkan {
+#kontaksaya,
+.linearkan {
   background: linear-gradient(120deg, #0098ff, #205edd);
 }
 
-ul.tabs{
+.slideshow img {
+  height: 100%;
+  object-fit: cover;
+}
+
+ul.tabs {
   margin: 0px;
   padding: 0px;
   list-style: none;
 }
-ul.tabs li{
+ul.tabs li {
   background: none;
   color: #fff;
   background-color: black;
@@ -83,7 +118,7 @@ ul.tabs li{
   position: relative;
 }
 
-ul.tabs li.current{
+ul.tabs li.current {
   background: #0098ff;
   color: #fff;
 }
@@ -102,16 +137,22 @@ ul.tabs li.current::after {
   transform: translateX(-50%);
 }
 
-.tab-content{
+.tab-content {
   font-size: 20px;
   display: none;
 }
 
-.tab-content.current{
+.tab-content.current {
   display: inherit;
 }
 .bigabout {
-  top: 30%
+  top: 30%;
+}
+
+.max-drop {
+  height: 100% !important;
+  max-height: 100%;
+  transition: 0.2s max;
 }
 
 @tailwind utilities;

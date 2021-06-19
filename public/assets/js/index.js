@@ -1,16 +1,11 @@
-// Tabbed
-$(document).ready(function(){
-	
-	$('ul.tabs li').click(function(){
-		var tab_id = $(this).attr('data-tab');
+// Language Dropdown
+$("#btn-lang").click(function () {
+	$('#dropdown-lang').toggleClass('max-drop', 500, 'easeOut');
+});
 
-		$('ul.tabs li').removeClass('current');
-		$('.tab-content').removeClass('current');
-
-		$(this).addClass('current');
-		$("#"+tab_id).addClass('current');
-	})
-
-})
+// burger menu
+$("#burger").click(function() {
+	$("#menu").toggle();
+});
 
 
