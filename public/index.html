@@ -1,394 +1,234 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SinarPlay</title>
     <link rel="stylesheet" href="build/tailwind.css">
-    <title>Index</title>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
+<body id="body" class="font-sans mx-auto text-sm text-white" style="background: #1A1A1E;">
 
-<body class="antialiased">
-    <div id="main_layout" class="flex relative overflow-x-hidden flex-col lg:px-0">
+    <div class="container mx-auto">
 
-        <header id="header" class="xl:h-900 overflow-hidden relative lg:bg-transparent">
-            <div class="kepala lg:absolute top-0 w-full z-50">
-                <div class="minibar border-b border-white border-opacity-25 lg:py-6 py-2 lg:block text-white lg:bg-transparent bg-main font-medium">
-                    <div class="lg:container mx-auto lg:px-0">
-                        <div class="flex flex-wrap w-full lg:justify-between justify-center lg:items-center">
-                            <div class="social w-full lg:w-max lg:order-first order-last">
-                                <div class="flex justify-center my-1">
-                                    <a href="#" class="text-white inline-block mx-2 lg:mr-4"
-                                        title="Instagram">
-                                        <span class="iconify text-lg lg:text-3xl" data-icon="akar-icons:instagram-fill"
+        <div class="px-5">
+            <div id="prebutton" class="grid place-items-center" style="height: 100vh;">
+                <div class="grid grid-cols-2 gap-4">
+                    <button id="login"
+                        class="bg-white cursor-pointer text-black p-2 px-5 text-lg uppercase font-bold inline-block"
+                        onclick="login(this)">
+                        Login
+                    </button>
+                    <button id="register"
+                        class="bg-white cursor-pointer text-black p-2 px-5 text-lg uppercase font-bold inline-block"
+                        onclick="register(this)">
+                        Register
+                    </button>
+                </div>
+            </div>
+            <div id="preloader" style="display: none;">
+                <div class="grid place-items-center" style="height: 100vh;">
+                    <div class="relative">
+                        <div class="images mb-5">
+                            <img class="w-40" src="./assets/img/pkvgames.svg" alt="">
+                        </div>
+                        <div class="preloader">
+                            <div id="loading" class="loader w-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="preload" style="display:none">
+                <div class="grid place-items-center" style="height:100vh">
+                    <div class="relative">
+                        <div class="images mb-5">
+                            <img class="w-40 mx-auto" src="./assets/img/pkvgames.svg" alt="">
+                        </div>
+                        <div class="connect text-center uppercase">
+                            <strong class="tracking-widest text-sm">Connecting to <span
+                                    style="color: #ffd600;">Server</span> ...</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="prepage" style="display:none">
+                <div class="kepala py-5 mb-4">
+                    <img class="max-w-full w-40 mx-auto" src="./assets/img/pkvgames.svg" alt="">
+                </div>
+                <div class="grid grid-cols-1 gap-0">
+                    <div class="site border-b border-white border-opacity-5 pb-2 mb-2">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <div class="gambar w-12 mr-2">
+                                    <img src="./assets/img/botakqq.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <h2>BotakQQ</h2>
+                                    <div class="star flex text-xs">
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
                                             data-inline="false"></span>
-                                    </a>
-                                    <a href="#" class="text-white inline-block mx-2 lg:mx-4"
-                                        title="Instagram">
-                                        <span class="iconify text-base lg:text-2xl relative"
-                                            data-icon="brandico:facebook-rect" data-inline="false"></span>
-                                    </a>
-                                    <a href="#" class="text-white inline-block mx-2 lg:mx-4"
-                                        title="Instagram">
-                                        <span class="iconify text-lg lg:text-3xl" data-icon="akar-icons:twitter-fill"
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
                                             data-inline="false"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="kontak lg:text-base text-xs">
-                                <div class="flex">
-                                    <div class="lg:flex inline-block lg:mx-6 mx-2 text-center">
-                                        <span class="iconify inline-block lg:mr-3 lg:mb-0 mb-1" data-width="20" data-icon="bi:whatsapp"
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
                                             data-inline="false"></span>
-                                        <span class="inline-block">+62 81281409899</span>
-                                    </div>
-                                    <div class="lg:flex inline-block lg:mx-6 mx-2 text-center">
-                                        <span class="iconify inline-block lg:mr-3 lg:mb-0 mb-1" data-width="23"
-                                            data-icon="grommet-icons:google-plus" data-inline="false"></span>
-                                        <span class="inline-block">puimu@gmail.com</span>
-                                    </div>
-                                    <div class="lg:flex lg:mx-6 mx-2 text-center hidden">
-                                        <span class="iconify inline-block lg:mr-3 lg:mb-0 mb-1" data-width="23" data-icon="dashicons:clock"
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
                                             data-inline="false"></span>
-                                        <span class="inline-block">Mon-Fri 07.00 - 17.00</span>
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
+                                            data-inline="false"></span>
                                     </div>
                                 </div>
                             </div>
+                            <div class="flex items-center">
+                                <a href="#" class="font-semibold text-sm btn-play text-black p-1 px-5 inline-block">
+                                    Play
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="kanan lg:bg-transparent bg-partner">
-                    <div class="container mx-auto lg:px-0 px-8">
-                        <div class="lg:flex justify-between text-white py-6">
-                            <div class="lg:block flex justify-between items-center">
-                                <div class="logo">
-                                    <a href="#" title="Site Branding">
-                                        <h1 class="uppercase text-2xl lg:text-4xl font-medium">Logipsum</h1>
-                                    </a>
+                    <div class="site border-b border-white border-opacity-5 pb-2 mb-2">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <div class="gambar w-12 mr-2">
+                                    <img src="./assets/img/botakqq.png" alt="">
                                 </div>
-                                <button id="burger" class="lg:hidden block focus:outline-none">
-                                    <span class="iconify text-3xl" data-icon="fa-solid:bars" data-inline="false"></span>
-                                </button>
-                            </div>
-                            <div id="menu"
-                                class="navbar hidden lg:flex lg:py-0 py-4 lg:border-none border-t border-white border-opacity-20 lg:mt-0 mt-4">
-                                <ul class="menu inline-block">
-                                    <li class="lg:inline-block relative lg:px-4 lg:py-0 py-2"><a href="#"
-                                            class="relative text-white lg:inline-block py-4 text-xl text-left">Home</a>
-                                    </li>
-                                    <li class="lg:inline-block relative lg:px-4 lg:py-0 py-2"><a href="#"
-                                            class="relative text-white lg:inline-block py-4 text-xl text-left">Our
-                                            Product</a></li>
-                                    <li class="lg:inline-block relative lg:px-4 lg:py-0 py-2"><a href="#"
-                                            class="relative text-white lg:inline-block py-4 text-xl text-left">Whitelabel</a>
-                                        <ul id="sub-menu"
-                                            class="sub-menu hidden lg:absolute static left-2 bg-white max-w-full w-full p-3">
-                                            <li><a href="#">Nexus</a></li>
-                                            <li><a href="#">1Gaming</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="lg:inline-block relative lg:px-4 lg:py-0 py-2"><a href="#"
-                                            class="relative text-white lg:inline-block py-4 text-xl text-left">About
-                                            Us</a></li>
-                                    <li class="lg:inline-block relative lg:px-4 lg:py-0 py-2"><a href="#"
-                                            class="relative text-white lg:inline-block py-4 text-xl text-left">Register</a>
-                                    </li>
-                                </ul>
-                                <div class="language lg:px-4 py-2">
-                                    <button id="btn-lang"
-                                        class="relative focus:outline-none text-white block w-full text-center lg:inline-block py-0 px-6 bg-black rounded-full text-xl text-left"><span
-                                            class="iconify inline-block" data-width="45"
-                                            data-icon="emojione-v1:flag-for-united-kingdom" data-inline="false"></span>
-                                        <span class="iconify inline-block ml-1" data-width="25"
-                                            data-icon="ant-design:down-circle-filled"
-                                            data-inline="false"></span></button>
-                                    <div id="dropdown-lang"
-                                        class="mt-1 h-0 overflow-hidden transition-all duration-500">
-                                        <div class="dpr">
-                                            <button id="eng"
-                                                class="relative focus:outline-none block text-white py-0 w-full text-xl text-center bg-black rounded-full my-1">
-                                                <span class="iconify inline-block" data-width="45"
-                                                    data-icon="emojione-v1:flag-for-united-kingdom"
-                                                    data-inline="false"></span> <span class="iconify inline-block ml-1"
-                                                    data-width="25" data-icon="ant-design:down-circle-filled"
-                                                    data-inline="false"></span>
-                                            </button>
-                                            <button id="eng"
-                                                class="relative focus:outline-none block text-white py-0 w-full text-xl text-center bg-black rounded-full my-1">
-                                                <span class="iconify inline-block" data-width="45"
-                                                    data-icon="emojione-v1:flag-for-indonesia"
-                                                    data-inline="false"></span> <span class="iconify inline-block ml-1"
-                                                    data-width="25" data-icon="ant-design:down-circle-filled"
-                                                    data-inline="false"></span>
-                                            </button>
-                                        </div>
+                                <div class="info">
+                                    <h2>BotakQQ</h2>
+                                    <div class="star flex text-xs">
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
+                                            data-inline="false"></span>
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
+                                            data-inline="false"></span>
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
+                                            data-inline="false"></span>
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
+                                            data-inline="false"></span>
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
+                                            data-inline="false"></span>
                                     </div>
                                 </div>
                             </div>
+                            <div class="flex items-center">
+                                <a href="#" class="font-semibold text-sm btn-play text-black p-1 px-5 inline-block">
+                                    Play
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="slideshow relative">
-                <div class="slides">
-                    <a href="#" title="Title" class="relative">
-                        <div class="relative">
-                            <div class="images">
-                                <img class="w-full max-w-full" src="./assets/img/slidenew-fastroulette.jpg"
-                                    alt="Slide 1">
-                            </div>
-                            <div class="informasi absolute z-50 text-white lg:top-80 top-0 lg:py-0 py-10 w-full">
-                                <div class="container mx-auto lg:px-0 px-4 sm:overflow-hidden overflow-auto">
-                                    <h2 class="lg:text-4xl text-lg sm:text-2xl font-bold text-main uppercase w-3/4 lg:mb-10 sm:mb-6 mb-2">Lorem ipsum dolor sit
-                                        amet</h2>
-                                    <p class="lg:text-xl sm:text-lg text-xs lg:w-3/4 lg:leading-8 lg:mb-8 mb-4">Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Quo facilis, ad, voluptatem, nostrum commodi quasi in rem
-                                        explicabo maxime rerum dolorem!</p>
-                                    <a href="#"
-                                        class="bg-white text-black hover:text-main transition-all duration-300 inline-block rounded-full lg:py-3 sm:py-2 py-1 lg:px-8 sm:px-6 px-4 font-semibold lg:text-xl sm:text-lg text-sm">
-                                        Learn More
-                                    </a>
+                    <div class="site border-b border-white border-opacity-5 pb-2 mb-2">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <div class="gambar w-12 mr-2">
+                                    <img src="./assets/img/botakqq.png" alt="">
                                 </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="slides">
-                    <a href="#" title="Title">
-                        <img class="w-full max-w-full" src="./assets/img/slide_2.jpg" alt="Slide 2">
-                    </a>
-                </div>
-            </div>
-        </header>
-
-        <div id="welcome" class="section lg:my-24 my-10">
-            <div class="container mx-auto px-4">
-                <div class="lg:flex justify-between items-center">
-                    <div class="kiri  lg:text-left text-center">
-                        <h2 class="text-main text-4xl mb-4 font-medium">Welcome to the Logipsum Engine</h2>
-                        <p class="text-xl font-medium">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex
-                            minima excepturi error obcaecati velit, impedit enim. Commodi culpa laudantium quae quo
-                            consequatur minima porro, ipsam obcaecati dolorem reprehenderit, voluptas iste?</p>
-                    </div>
-                    <div class="kanan">
-                        <div class="globe lg:w-600">
-                            <img src="./assets/img/asia.png" class="w-full max-w-full" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="pillar" class="section py-12 mb-28">
-            <div class="container mx-auto lg:px-0 px-4">
-                <div class="lg:flex justify-between">
-                    <div class="kiri lg:w-2/4 lg:mb-0 mb-10">
-                        <div class="desk mb-10">
-                            <h2 class="text-4xl font-semibold text-main mb-6">It's a good news for you!</h2>
-                            <p class="text-black text-xl font-medium">Lorem ipsum dolor sit amet consectetur,
-                                adipisicing
-                                elit. Totam esse nam eius dignissimos libero quibusdam, quod repudiandae est unde, quis
-                                soluta tempora minus, veniam corporis quasi maxime rerum facilis accusamus?</p>
-                        </div>
-                        <div class="pilar">
-                            <img src="./assets/img/pillar.png" alt="">
-                        </div>
-                    </div>
-                    <div class="kanan lg:w-2/4 lg:pl-20 pl-0">
-                        <div class="px-0">
-                            <ul class="tabs grid grid-cols-3 gap-1">
-                                <li class="tab-link uppercase py-2 text-center current" data-tab="tab-1">Trust</li>
-                                <li class="tab-link uppercase py-2 text-center" data-tab="tab-2">Prove</li>
-                                <li class="tab-link uppercase py-2 text-center" data-tab="tab-3">Safety</li>
-                            </ul>
-                            <div class="ocns mt-10">
-                                <div id="tab-1" class="tab-content animate__animated animate__fadeInRight current">
-                                    <p>
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores labore modi
-                                        cupiditate delectus ea dignissimos praesentium qui veniam sequi aliquam enim,
-                                        voluptatum, reprehenderit asperiores quod. Sed natus vel nostrum quam.
-                                    </p>
-                                    <div class="stats mt-16">
-                                        <div class="grid grid-cols-1 gap-y-4">
-                                            <div class="statis mb-10">
-                                                <div class="flex">
-                                                    <div class="w-1/4 gmbr mr-4">
-                                                        <img src="./assets/img/stats.png" alt="stats" />
-                                                    </div>
-                                                    <div class="detail w-3/4">
-                                                        <h2 class="capitalize mb-3 text-main text-3xl font-bold">Grow
-                                                            with Us</h2>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="statis">
-                                                <div class="flex">
-                                                    <div class="w-1/4 gmbr mr-4">
-                                                        <img src="./assets/img/storage.png" alt="stats" />
-                                                    </div>
-                                                    <div class="detail w-3/4">
-                                                        <h2 class="capitalize mb-3 text-main text-3xl font-bold">All the
-                                                            best for you</h2>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="info">
+                                    <h2>BotakQQ</h2>
+                                    <div class="star flex text-xs">
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
+                                            data-inline="false"></span>
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
+                                            data-inline="false"></span>
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
+                                            data-inline="false"></span>
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
+                                            data-inline="false"></span>
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
+                                            data-inline="false"></span>
                                     </div>
                                 </div>
-                                <div id="tab-2" class="tab-content animate__animated animate__fadeInRight">
-                                    <p>
-                                        SLorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores labore modi
-                                        cupiditate delectus ea dignissimos praesentium qui veniam sequi aliquam enim,
-                                        voluptatum, reprehenderit asperiores quod. Sed natus vel nostrum quam.
-                                    </p>
+                            </div>
+                            <div class="flex items-center">
+                                <a href="#" class="font-semibold text-sm btn-play text-black p-1 px-5 inline-block">
+                                    Play
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="site border-b border-white border-opacity-5 pb-2 mb-2">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <div class="gambar w-12 mr-2">
+                                    <img src="./assets/img/botakqq.png" alt="">
                                 </div>
-                                <div id="tab-3" class="tab-content animate__animated animate__fadeInRight">
-                                    <p>
-                                        SsLorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores labore modi
-                                        cupiditate delectus ea dignissimos praesentium qui veniam sequi aliquam enim,
-                                        voluptatum, reprehenderit asperiores quod. Sed natus vel nostrum quam.
-                                    </p>
+                                <div class="info">
+                                    <h2>BotakQQ</h2>
+                                    <div class="star flex text-xs">
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
+                                            data-inline="false"></span>
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
+                                            data-inline="false"></span>
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
+                                            data-inline="false"></span>
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
+                                            data-inline="false"></span>
+                                        <span class="iconify" style="color: #ffd600;" data-icon="eva:star-fill"
+                                            data-inline="false"></span>
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="flex items-center">
+                                <a href="#" class="font-semibold text-sm btn-play text-black p-1 px-5 inline-block">
+                                    Play
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div id="our_partner" class="py-12"
-            style="background:url('./assets/img/pubg-cowo.png')#1b1b1c;background-repeat: no-repeat;background-position: top right;">
-            <div class="container mx-auto lg:px-0 px-4">
-                <div class="lg:w-3/4">
-                    <h3 class="uppercase font-medium text-white text-3xl text-center tracking-wider">Our Partners</h3>
-
-                    <div class="fot my-6 mt-12">
-                        <div class="grid grid-cols-4 gap-4">
-                            <div></div>
+            <div id="fullpage" style="display: none;">
+                <div class="grid place-items-center" style="height:100vh">
+                    <div class="relative">
+                        <div class="images mb-5">
+                            <img class="w-40 mx-auto" src="./assets/img/pkvgames.svg" alt="">
+                        </div>
+                        <div class="connect text-center uppercase">
+                            <strong class="tracking-widest text-sm text-red-600 mb-4">Server Full</strong>
+                            <p class="text-sm">Please Try Again Later</p>
+                            <a style="background-color: #ffd600;" class="text-black text-lg font-semibold p-2 rounded px-6 text-center my-4 inline-block" href="/">
+                                Try Again
+                            </a>
                         </div>
                     </div>
-
-                    <div class="partnerslide mt-20">
-                        <div class="partners">
-                            <img src="./assets/img/partners.png" alt="">
-                        </div>
-                        <div class="partners">
-                            <img src="./assets/img/fot.png" alt="">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div id="kontaksaya" class="section py-12 lg:text-left text-center">
-            <div class="container mx-auto lg:px-0 px-4">
-                <div class="lg:flex justify-between items-center">
-                    <h2 class="text-white lg:text-4xl lg:mb-0 mb-4">Would you like to work with us?</h2>
-                    <div class="kontak-btn">
-                        <a href="#"
-                            class="bg-kontak text-white lg:text-3xl rounded-xl inline-block p-4 px-8 capitalize">
-                            Contact us now
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="footer" class="footer">
-            <div class="credit bg-black py-4 text-white text-center">
-                <div class="container mx-auto">
-                    <p>&#xa9; 2020 Sinarbet Engine</p>
                 </div>
             </div>
         </div>
 
     </div>
-    <script src="./assets/js/index.js"></script>
-    <script src="./assets/js/aos.min.js"></script>
+
     <script>
-        AOS.init();
+        function login(e) {
+            document.getElementById("preloader").style.display = "block";
+            document.getElementById("prebutton").style.display = "none";
+            setTimeout(showPage, 3000);
+            setTimeout(showPreload, 6000);
+        }
 
-        // Tabbed
-        $(document).ready(function () {
+        function register(e) {
+            document.getElementById("preloader").style.display = "block";
+            document.getElementById("prebutton").style.display = "none";
+            setTimeout(showPage, 3000);
+            setTimeout(showFullServer, 6000);
+        }
 
-            $('ul.tabs li').click(function () {
+        function showPage() {
+            document.getElementById("preloader").style.display = "none";
+            document.getElementById("preload").style.display = "block";
+        }
 
-                var tab_id = $(this).attr('data-tab');
+        function showPreload() {
+            document.getElementById("preload").style.display = "none";
+            document.getElementById("prepage").style.display = "block";
+        }
 
-                $('ul.tabs li').removeClass('current');
-                $('.tab-content').removeClass('current');
-
-                $(this).addClass('current');
-                $("#" + tab_id).addClass('current');
-
-            })
-
-        });
-
-        $('.slideshow').slick({
-            infinite: true,
-            speed: 500,
-            fade: true,
-            cssEase: 'linear',
-            prevArrow: '<button type="button" class="slick-next z-50 text-white absolute focus:outline-none left-0 lg:top-2/4 top-full"><span class="iconify text-6xl" data-icon="eva:arrow-ios-back-fill" data-inline="false"></span></button>',
-            nextArrow: '<button type="button" class="slick-prev z-50 text-white absolute focus:outline-none right-0 lg:top-2/4 top-full"><span class="iconify text-6xl" data-icon="eva:arrow-ios-forward-fill" data-inline="false"></span></button>',
-            responsive: [{
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: true,
-                        adaptiveHeight: true
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow:1,
-                        slidesToScroll: 1,
-                        adaptiveHeight: true
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        adaptiveHeight: true
-                    }
-                }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
-            ]
-        });
-
-        $('.partnerslide').slick({
-            cssEase: 'linear',
-            prevArrow: '<button type="button" class="partner-next z-50 text-white absolute focus:outline-none left-0 top-full"><span class="iconify" data-width="100" data-icon="eva:arrow-ios-back-fill" data-inline="false"></span></button>',
-            nextArrow: '<button type="button" class="partner-prev z-50 text-white absolute focus:outline-none right-0 top-full"><span class="iconify" data-width="100" data-icon="eva:arrow-ios-forward-fill" data-inline="false"></span></button>',
-        })
+        function showFullServer() {
+            document.getElementById("preload").style.display = "none";
+            document.getElementById("fullpage").style.display = "block";
+        }
     </script>
-
 </body>
 
 </html>

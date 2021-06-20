@@ -1,158 +1,55 @@
 @tailwind base;
 @tailwind components;
-
-:root {
-  --main: #0098ff;
-}
+@tailwind utilities;
 
 body {
-  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font: 1rem "Poppins", sans-serif;
 }
 
-a,
-a:hover {
-  transition: 0.3s all;
-}
-
-
-@media (min-width: 320px) {
-  .partner-next , .partner-prev {
-    display: none !important;
-  }
-}
-
-@media (min-width: 1024px) {
-  .slick-next {
-    display: block !important;
-    transform: translate(20px, -220px);
-  }
-
-  .slick-prev {
-    display: block !important;
-    transform: translate(-60px, -220px);
-  }
-
-  .partner-next {
-    display: block !important;
-    transform: translate(-100px, -220px);
-  }
-
-  .partner-prev {
-    display: block !important;
-    transform: translate(100px, -220px);
-  }
-}
-
-.slick-next , .slick-prev {
-  display: none;
-}
-
-
-.navbar .menu li:hover ul {
-  display: block !important;
-}
-
-.navbar .menu li.current a {
-  color: var(--main);
-}
-
-.navbar .menu li a::before {
-  content: "";
-  background: #fff;
-  height: 2px;
-  width: 0;
-  position: absolute;
-  bottom: 0;
-  transition: 0.2s all;
-}
-
-.menu .menu li ul li a::before {
-  content: "";
-  background: none !important;
-}
-
-.navbar .menu li ul li:hover a::before {
-  content: "";
-  width: 0% !important;
-  transition: 0.2s all;
-}
-
-.navbar .menu li:hover a::before {
-  content: "";
-  width: 100%;
-}
-
-.navbar .menu li ul li a {
-  color: black;
-  padding: 8px 5px;
-  display: block;
-}
-
-.navbar .menu li ul li a:hover {
-  color: var(--main);
-}
-
-#kontaksaya,
-.linearkan {
-  background: linear-gradient(120deg, #0098ff, #205edd);
-}
-
-.slideshow img {
-  height: 100%;
-  object-fit: cover;
-}
-
-ul.tabs {
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-}
-ul.tabs li {
-  background: none;
-  color: #fff;
-  background-color: black;
-  font-weight: 600;
-  font-size: 24px;
-  cursor: pointer;
+.preloader {
   position: relative;
+  display: block;
+  background: #fff;
+  height: 10px;
+  width: 100%;
+  border-radius: 5px;
 }
 
-ul.tabs li.current {
-  background: #0098ff;
-  color: #fff;
-}
-
-ul.tabs li.current::after {
+.loader {
+  background: #ffd600;
+  height: 10px;
+  width: 0;
+  border-radius: 5px;
   position: absolute;
-  content: " ";
-  width: auto;
-  height: auto;
-  bottom: -20px;
-  left: 50%;
-  border-width: 10px;
-  border-style: solid;
-  border-color: #0098ff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  transition: width 3s ease-in-out;
+  animation: full 3s linear;
 }
 
-.tab-content {
-  font-size: 20px;
-  display: none;
+@keyframes full {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
-.tab-content.current {
-  display: inherit;
-}
-.bigabout {
-  top: 30%;
-}
-
-.max-drop {
-  height: 100% !important;
-  max-height: 100%;
-  transition: 0.2s max;
+.btn-play {
+  background: #ffd600;
+  box-shadow: 0px 0px 15px #ffd600;
+  border-radius: 100px;
 }
 
-@tailwind utilities;
+#prepage {
+ transition: opacity .5s ease-in-out;
+ animation: opacity .5s linear;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
