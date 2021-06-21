@@ -17,20 +17,29 @@
     <div class="container mx-auto">
 
         <div class="px-5">
+
+            <!-- you can delete this button after you make a condition  -->
             <div id="prebutton" class="grid place-items-center" style="height: 100vh;">
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-3 gap-4">
                     <button id="login"
                         class="bg-white cursor-pointer text-black p-2 px-5 text-lg uppercase font-bold inline-block"
-                        onclick="login(this)">
-                        Login
+                        onclick="success(this)">
+                        Success
                     </button>
                     <button id="register"
                         class="bg-white cursor-pointer text-black p-2 px-5 text-lg uppercase font-bold inline-block"
-                        onclick="register(this)">
-                        Register
+                        onclick="failed(this)">
+                        Failed
+                    </button>
+                    <button id="register"
+                        class="bg-white cursor-pointer text-black p-2 px-5 text-lg uppercase font-bold inline-block"
+                        onclick="content(this)">
+                        Content
                     </button>
                 </div>
             </div>
+
+
             <div id="preloader" style="display: none;">
                 <div class="grid place-items-center" style="height: 100vh;">
                     <div class="relative">
@@ -188,7 +197,9 @@
                         <div class="connect text-center uppercase">
                             <strong class="tracking-widest text-sm text-red-600 mb-4">Server Full</strong>
                             <p class="text-sm">Please Try Again Later</p>
-                            <a style="background-color: #ffd600;" class="text-black text-lg font-semibold p-2 rounded px-6 text-center my-4 inline-block" href="/">
+                            <a style="background-color: #ffd600;"
+                                class="text-black text-lg font-semibold p-2 rounded px-6 text-center my-4 inline-block"
+                                href="/">
                                 Try Again
                             </a>
                         </div>
@@ -200,18 +211,25 @@
     </div>
 
     <script>
-        function login(e) {
+        function success(e) {
             document.getElementById("preloader").style.display = "block";
             document.getElementById("prebutton").style.display = "none";
             setTimeout(showPage, 3000);
             setTimeout(showPreload, 6000);
         }
 
-        function register(e) {
+        function failed(e) {
             document.getElementById("preloader").style.display = "block";
             document.getElementById("prebutton").style.display = "none";
             setTimeout(showPage, 3000);
             setTimeout(showFullServer, 6000);
+        }
+
+        function content(e) {
+            document.getElementById("preloader").style.display = "block";
+            document.getElementById("prebutton").style.display = "none";
+            setTimeout(showContent, 3000);
+            setTimeout(showPreload, 6000);
         }
 
         function showPage() {
@@ -227,6 +245,11 @@
         function showFullServer() {
             document.getElementById("preload").style.display = "none";
             document.getElementById("fullpage").style.display = "block";
+        }
+
+        function showContent() {
+            document.getElementById("preloader").style.display = "none";
+            document.getElementById("prepage").style.display = "block";
         }
     </script>
 </body>
